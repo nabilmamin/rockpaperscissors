@@ -42,15 +42,14 @@ button {
 }
 
 .win {
-    filter: invert(98%) sepia(21%) saturate(5774%) hue-rotate(52deg) brightness(92%) contrast(101%);
+    filter: invert(75%) sepia(79%) saturate(3787%) hue-rotate(157deg) brightness(96%) contrast(95%);
 }
 
-.lose {
-    filter: invert(11%) sepia(85%) saturate(4312%) hue-rotate(357deg) brightness(124%) contrast(117%);
-}
-
-.tie {
-    filter: invert(0%) sepia(3%) saturate(15%) hue-rotate(53deg) brightness(101%) contrast(100%);
+.output-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
 }
 
 .output {
@@ -69,3 +68,11 @@ button {
     padding: 1rem;
 }
 
+.replay {
+    display: none;
+    border: none;
+}
+
+.active {
+    display: block;
+}

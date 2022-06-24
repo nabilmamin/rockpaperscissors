@@ -4,6 +4,7 @@ const playerScore = document.querySelector('.playerscore');
 const computerScore = document.querySelector('.computerscore');
 const playerIcon = document.querySelector('.player-icon');
 const computerIcon = document.querySelector('.computer-icon');
+const replay = document.querySelector('.replay');
 const rockImgSrc = 'images/hand-fist-solid.svg';
 const paperImgSrc = 'images/hand-solid.svg';
 const scissorsImgSrc = 'images/hand-scissors-solid.svg';
@@ -12,6 +13,10 @@ let i = 0;
 let playerRound = 0;
 let computerRound = 0;
 let winnerRound = '';
+
+playerScore.innerHTML = (`Player: ${playerRound}`);
+computerScore.innerHTML = (`Computer: ${computerRound}`);
+output.innerHTML = 'Choose your hand.'
 
 function computerHand() {
     const round = Math.floor(Math.random() * 3);
@@ -32,15 +37,18 @@ function computerHand() {
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         output.innerHTML = (`It's a tie! You both choose ${computerSelection}`)
-        winnerRound = 'tie'
+        playerIcon.classList.remove('win')
+        computerIcon.classList.remove('win')
     } else if ((playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper"))  {
         output.innerHTML = (`You won! ${playerSelection} beats ${computerSelection}.`)
         playerRound++;
-        winnerRound = 'player'
+        playerIcon.classList.add('win')
+        computerIcon.classList.remove('win')
     } else {
         output.innerHTML = (`You lost! ${computerSelection} beats ${playerSelection}.`)
         computerRound++;
-        winnerRound = 'computer'
+        playerIcon.classList.remove('win')
+        computerIcon.classList.add('win')
     }
     score = [playerRound, computerRound]
     return score
@@ -54,8 +62,10 @@ for (i; i < 3; i++) {
 
         if (playerRound === 5) {
             output.innerHTML = 'Congrats! You have won the game!'
+            replay.classList.add('active')
         } else if (computerRound === 5) {
             output.innerHTML = 'Sorry! You have lost the game!'
+            replay.classList.add('active')
         }
         else {
             const computerSelection = computerHand();
@@ -121,6 +131,14 @@ for (i; i < 3; i++) {
 })
 }
 
+replay.addEventListener('click', function(e){
+    playerRound = 0;
+    computerRound = 0;
+    playerScore.innerHTML = (`Player: ${playerRound}`);
+    computerScore.innerHTML = (`Computer: ${computerRound}`);
+    output.innerHTML = 'Choose your hand.'
+
+})
 
 // // Anything below this line is just work in progress, testing ideas, or notes.
 // // Computer chooses their hand. 
