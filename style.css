@@ -1,0 +1,71 @@
+button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid black;
+    transition: all 0.07s;
+    font-size: 1.2rem;
+}
+
+.playing {
+    border: 2px solid yellow;
+    transform: scale(1.1);
+}
+
+.button-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 3rem;
+}
+
+.play-window {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 300px;
+}
+
+.player-icon {
+    width: 200px;
+}
+
+.break {
+    font-size: 3rem;
+}
+.computer-icon {
+    width: 200px;
+}
+
+.win {
+    filter: invert(98%) sepia(21%) saturate(5774%) hue-rotate(52deg) brightness(92%) contrast(101%);
+}
+
+.lose {
+    filter: invert(11%) sepia(85%) saturate(4312%) hue-rotate(357deg) brightness(124%) contrast(117%);
+}
+
+.tie {
+    filter: invert(0%) sepia(3%) saturate(15%) hue-rotate(53deg) brightness(101%) contrast(100%);
+}
+
+.output {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+

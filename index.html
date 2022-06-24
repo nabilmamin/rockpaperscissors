@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <div class="play-window">
+        <img src="" alt="" class="player-icon">
+        <div class="break">X</div>
+        <img src="" alt="" class="computer-icon">
+    </div>
+    <div class="output-window">
+        <div class="output"></div>
+        <div class="score">
+            <div class="playerscore"></div>
+            <div class="computerscore"></div>
+        </div>
+    </div>
+    <div class="button-category">
+        <button data-hand="rock" class="btn-key">Rock</button>
+        <button data-hand="paper" class="btn-key">Paper</button>
+        <button data-hand="scissors" class="btn-key">Scissors</button>
+    </div>    
 </body>
 </html>
