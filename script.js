@@ -57,6 +57,7 @@ function playRound(playerSelection, computerSelection) {
 for (i; i < 3; i++) {
     playerHand[i].addEventListener('click', function() {
 
+
         if (playerRound === 5) {
             output.innerHTML = 'Congrats! You have won the game!'
             replay.classList.add('active')
@@ -88,11 +89,9 @@ for (i; i < 3; i++) {
         playerScore.innerHTML = (`Player: ${playerRound}`);
         computerScore.innerHTML = (`Computer: ${computerRound}`);
 
-        
-    
-
 })
 }
+
 
 replay.addEventListener('click', function(e){
     playerRound = 0;

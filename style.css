@@ -41,10 +41,6 @@ button {
     width: 200px;
 }
 
-.win {
-    filter: invert(75%) sepia(79%) saturate(3787%) hue-rotate(157deg) brightness(96%) contrast(95%);
-}
-
 .output-window {
     display: flex;
     flex-direction: column;
@@ -73,6 +69,28 @@ button {
     border: none;
 }
 
+.replay.active:hover {
+    transition: 0.1s;
+    transform: scale(1.1);
+    color: #14B9F0 ;
+}
+
+.btn-key {
+    transition: all 0.1s;
+}
+
+.btn-key:hover {
+    transform: scale(1.1);
+    border-color: #14B9F0 ;
+}
+
+/* Toggle Classes */
+
 .active {
     display: block;
 }
+
+.win {
+    filter: invert(75%) sepia(79%) saturate(3787%) hue-rotate(157deg) brightness(96%) contrast(95%);
+}
+
